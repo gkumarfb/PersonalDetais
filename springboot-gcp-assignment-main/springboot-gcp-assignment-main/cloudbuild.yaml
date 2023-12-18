@@ -5,4 +5,4 @@ steps:
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy']
-  dir: '/workspace/springboot-gcp-assignment-main'
+  dir: '/workspace/springboot-gcp-assignment-main/springboot-gcp-assignment-main'
