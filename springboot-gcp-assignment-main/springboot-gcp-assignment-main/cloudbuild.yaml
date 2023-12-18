@@ -1,6 +1,9 @@
 steps:
-- name: 'maven:3.8.4-openjdk-17'
-  entrypoint: 'bash'
+- name: 'gcr.io/cloud-builders/git'
+  args: ['clone', '--single-branch', '--branch', '$BRANCH_NAME', 'https://source.developers.google.com/p/$PROJECT_ID/r/$REPO_NAME', '/workspace']
+
+- name: 'gcr.io/cloud-builders/mvn'
+  entrypoint: '/bin/sh'
   args:
     - '-c'
     - |
