@@ -4,7 +4,7 @@ steps:
   args: ['-Dmaven.compiler.source=11', '-Dmaven.compiler.target=11','clean', 'install']
   dir: 'springboot-gcp-assignment-main/springboot-gcp-assignment-main'
   env:
-    - 'JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64'
+    - 'JAVA_HOME=docker.io/library/maven:3.8.4-openjdk11'
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy']
