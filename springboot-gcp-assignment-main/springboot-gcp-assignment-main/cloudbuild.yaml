@@ -1,7 +1,0 @@
-steps:
-- name: 'gcr.io/cloud-builders/mvn'
-  args: ['clean', 'install']
-
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy']
-  dir: 'springboot-gcp-assignmet-mail/springboot-gcp-assignment-main/src/main/java/com/gcp/assignment/BasicDetailsMsApplication.java'
