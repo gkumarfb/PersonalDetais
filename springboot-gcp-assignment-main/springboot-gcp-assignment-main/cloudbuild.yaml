@@ -1,4 +1,7 @@
 steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['app', 'create']
+  dir: 'springboot-gcp-assignment-main/springboot-gcp-assignment-main'
 - name: 'maven:3.8.4-openjdk-17'
   entrypoint: 'mvn'
   args: ['clean', 'install']
