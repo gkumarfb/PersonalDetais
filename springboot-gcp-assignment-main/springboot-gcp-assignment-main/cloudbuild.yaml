@@ -1,7 +1,7 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
+- name: 'maven:3.8.4-openjdk-17'
   entrypoint: 'mvn'
-  args: ['-Dmaven.compiler.source=17', '-Dmaven.compiler.target=17', 'clean', 'install']
+  args: ['clean', 'install']
   dir: 'springboot-gcp-assignment-main/springboot-gcp-assignment-main'
 
 - name: 'gcr.io/cloud-builders/gcloud'
