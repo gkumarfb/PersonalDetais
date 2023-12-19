@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/orbit-broker-407106/maven-image:latest', '.']
+  args: ['push', '-t', 'gcr.io/orbit-broker-407106/maven-image:latest', '.']
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy']
