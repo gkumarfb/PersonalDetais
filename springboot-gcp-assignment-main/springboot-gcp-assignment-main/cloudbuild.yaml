@@ -1,5 +1,5 @@
 steps:
-- name: 'maven:3.8.4-openjdk-17'
+- name: 'gcr.io/[PROJECT_ID]/maven-image:latest'
   entrypoint: 'mvn'
   args: ['-Dmaven.compiler.source=17', '-Dmaven.compiler.target=17', 'clean', 'install']
   dir: 'springboot-gcp-assignment-main/springboot-gcp-assignment-main'
