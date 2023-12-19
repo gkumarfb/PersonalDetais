@@ -1,5 +1,5 @@
 steps:
-- name: 'gcr.io/orbital-broker-407106/maven-image:latest'
+- name: 'maven:3.8.4-openjdk-17'
   entrypoint: 'mvn'
   args: ['-Dmaven.compiler.source=17', '-Dmaven.compiler.target=17', 'clean', 'install']
   dir: 'springboot-gcp-assignment-main/springboot-gcp-assignment-main'
@@ -9,6 +9,5 @@ steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy']
   dir: 'springboot-gcp-assignment-main/springboot-gcp-assignment-main'
-
 
 
