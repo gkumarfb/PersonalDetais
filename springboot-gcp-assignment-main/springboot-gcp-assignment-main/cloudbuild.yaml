@@ -1,6 +1,6 @@
 steps:
 - name: 'maven:3.8.4-openjdk-17'
-  entrypoint: 'mvn'
+  entrypoint: 'mvnw'
   args: ['-Dmaven.compiler.source=17', '-Dmaven.compiler.target=17', 'clean', 'install']
   dir: 'springboot-gcp-assignment-main/springboot-gcp-assignment-main'
 - name: 'gcr.io/cloud-builders/gcloud'
