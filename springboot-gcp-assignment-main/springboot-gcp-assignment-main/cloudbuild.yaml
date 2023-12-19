@@ -3,8 +3,6 @@ steps:
   entrypoint: 'mvn'
   args: ['-Dmaven.compiler.source=17', '-Dmaven.compiler.target=17', 'clean', 'install']
   dir: 'springboot-gcp-assignment-main/springboot-gcp-assignment-main'
-  env:
-  - 'JAVA_HOME=/usr/bin'
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy']
   dir: 'springboot-gcp-assignment-main/springboot-gcp-assignment-main'
