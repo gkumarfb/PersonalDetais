@@ -1,7 +1,4 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['pull', 'gcr.io/orbital-broker-407106/maven-image']
-
 - name: 'gcr.io/orbital-broker-407106/maven-image:latest'
   entrypoint: 'mvn'
   args: ['-Dmaven.compiler.source=17', '-Dmaven.compiler.target=17', 'clean', 'install']
